@@ -1,0 +1,108 @@
+/*---------EDITOR MENU------*/
+
+
+ul.cms-inmotion-editor{
+	list-style: none;
+	li{
+		height: 36px;
+		width: 36px;
+		background-color: @blue;
+		border-radius: 2px;
+		margin-top: 2px;
+		box-shadow: @shadow-z1;
+		
+		-webkit-backface-visibility: hidden;
+		-webkit-font-smoothing: antialiased;
+		-webkit-transition: all 0.2s;
+		-moz-transition: all 0.2s;
+		transition: all 0.2s;
+
+		span{
+		display: none;
+		}
+		i{
+			color: #fff;
+			padding-top: 8px;
+			padding-left: 9px;
+		}
+		.fa-edit{
+			padding-top: 8px;
+			padding-left: 9px;
+		}
+		.fa-arrows-v{
+			padding-top: 8px;
+			padding-left: 14px;
+		}
+		.fa-eye{
+			padding-top: 8px;
+			padding-left: 9px;
+		}
+		.fa-trash-o{
+			padding-top: 8px;
+			padding-left: 9px;
+		}
+		.fa-plus{
+			padding-top: 8px;
+			padding-left: 9px;
+		}
+		.fa-2x{
+			font-size:1.6em;
+		}
+	}
+	li:hover{
+		background-color:@blue-600;
+		cursor: pointer;
+		box-shadow: none;
+	}
+	li.delete{
+		background-color: @red-400;
+	}
+	li.delete:hover{
+		background-color: @red-600;
+	}
+	li.edit{
+		background-color: @light-green-600;
+	}
+	li.edit:hover{
+		background-color: @light-green-700;
+	}
+	li.add{
+		background-color: @yellow-700;
+	}
+	li.add:hover{
+		background-color: @yellow-800;
+	}
+}
+
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) 
+{
+	ul.cms-inmotion-editor
+	{
+		li{
+			width: 150px;
+
+		
+			i
+			{
+				display: block;
+				float: left;
+				width: 40px;
+			}
+			.fa-2x{
+				font-size:1.2em;
+				padding-top: 10px;
+			}
+			span
+			{
+				display: block;
+				padding-top: 8px;
+				color: @white;
+				font-weight: 500;
+			}
+		}
+	}	
+}
+
+

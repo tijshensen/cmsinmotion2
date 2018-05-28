@@ -1,0 +1,39 @@
+.CMS_edit_container{
+	background-color: transparent;
+	min-height: 30px;
+	border: 1px dotted #eee;
+}
+
+.editor .sidebar .nav>li>a {
+	padding: 10px 26px;
+
+}
+
+.editor .sidebar .nav>li.fullsize{
+	margin-right: 2px;
+}
+
+.cmsinmotion #editorTools{
+	margin: 0;
+}
+
+.sidebar-inner .input-group-btn{
+	font-size: 14px;
+	vertical-align: bottom;
+}
+
+.sidebar-inner .input-group-btn .btn{
+	padding: 8px 10px 6px;
+}
+
+.sidebar-inner .input-group-btn .btn:hover{
+	background-color: #eee;
+	border-radius: 4px;
+}
+
+.renderport {
+    max-height: 180px;
+    border: 1px solid gray;
+    overflow: scroll;
+    margin-top: 20px;
+}

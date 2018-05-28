@@ -1,0 +1,301 @@
+// usage: .variations(~" .check", color, transparent);
+.variations(@extra, @property, @default) {
+    // Bootstrap shades
+    &@{extra}, &-default@{extra} {
+        @{property}: @default;
+    }
+    &-primary@{extra} {
+        @{property}: @primary;
+    }
+    &-success@{extra} {
+        @{property}: @success;
+    }
+    &-info@{extra} {
+        @{property}: @info;
+    }
+    &-warning@{extra} {
+        @{property}: @warning;
+    }
+    &-danger@{extra} {
+        @{property}: @danger;
+    }
+    // Material shades
+    &-material-red@{extra} {
+        @{property}: @red;
+    }
+    &-material-pink@{extra} {
+        @{property}: @pink;
+    }
+    &-material-purple@{extra} {
+        @{property}: @purple;
+    }
+    &-material-deeppurple@{extra} {
+        @{property}: @deeppurple;
+    }
+    &-material-indigo@{extra} {
+        @{property}: @indigo;
+    }
+    &-material-blue@{extra} {
+        @{property}: @blue;
+    }
+    &-material-lightblue@{extra} {
+        @{property}: @lightblue;
+    }
+    &-material-cyan@{extra} {
+        @{property}: @cyan;
+    }
+    &-material-teal@{extra} {
+        @{property}: @teal;
+    }
+    &-material-lightgreen@{extra} {
+        @{property}: @lightgreen;
+    }
+    &-material-lime@{extra} {
+        @{property}: @lime;
+    }
+    &-material-lightyellow@{extra} {
+        @{property}: @lightyellow;
+    }
+    &-material-orange@{extra} {
+        @{property}: @orange;
+    }
+    &-material-deeporange@{extra} {
+        @{property}: @deeporange;
+    }
+    &-material-grey@{extra} {
+        @{property}: @grey;
+    }
+    &-material-bluegrey@{extra} {
+        @{property}: @bluegrey;
+    }
+    &-material-brown@{extra} {
+        @{property}: @brown;
+    }
+    &-material-lightgrey@{extra} {
+        @{property}: @lightgrey;
+    }
+}
+
+@all-variations: ~"-default, -primary, -info, -success, -warning, -danger";
+
+// Typography elements for Material
+@darkbg-text: rgba(255,255,255,0.84);
+@lightbg-text: rgba(0,0,0,0.84);
+@icon-color: rgba(0,0,0,0.5);
+
+// Material colors palette
+@red: #F44336;
+@pink: #E91E63;
+@purple: #9C27B0;
+@deeppurple: #673AB7;
+@indigo: #3F51B5;
+@blue: #4285f4;
+@lightblue: #03A9F4;
+@cyan: #00BCD4;
+@teal: #009688;
+@lightgreen: #8BC34A;
+@lime: #CDDC39;
+@lightyellow: #FFEB3B;
+@orange: #FF9800;
+@deeporange: #FF5722;
+@grey: #9E9E9E;
+@bluegrey: #607D8B;
+@brown: #795548;
+@lightgrey: #ECECEC;
+
+// Bootstrap shades
+@primary: #009587;
+@success: #0F9D58;
+@info: @lightblue;
+@warning: @deeporange;
+@danger: @red;
+
+// Typography elements for Material
+@darkbg-text: rgba(255,255,255,0.84);
+@lightbg-text: rgba(0,0,0,0.84);
+@icon-color: rgba(0,0,0,0.5);
+
+
+// Bootstrap variables
+@btn-default: transparent;
+@btn-default-text: @lightbg-text;
+
+@btn-primary: @primary;
+@btn-primary-text: @darkbg-text;
+
+@btn-success: @success;
+@btn-success-text: @darkbg-text;
+
+@btn-info: @info;
+@btn-info-text: @darkbg-text;
+
+@btn-warning: @warning;
+@btn-warning-text: @darkbg-text;
+
+@btn-danger: @danger;
+@btn-danger-text: @darkbg-text;
+
+@input-unchecked: rgba(137, 137, 137, 0.3);
+@input-checked: rgba(15, 157, 88, 0.3);
+
+@radio-default: @lightbg-text;
+@radio-primary: @primary;
+@radio-success: @success;
+@radio-info:    @info;
+@radio-warning: @warning;
+@radio-danger:  @danger;
+
+@input-danger: @danger;
+@input-default: @primary;
+@input-warning: @warning;
+@input-success: @success;
+@input-info:    @info;
+
+@navbar-danger-bg: @danger;
+@navbar-inverse-bg: #5264AE;
+@navbar-warning-bg: @warning;
+@navbar-success-bg: @success;
+@navbar-info-bg:    @info;
+@navbar-default-bg: @primary;
+@navbar-color: @darkbg-text;
+@navbar-link-color: @darkbg-text;
+@navbar-link-hover-color: @darkbg-text;
+@navbar-link-hover-bg: transparent;
+@navbar-link-active-color: @darkbg-text;
+@navbar-link-active-bg: rgba(0,0,0,0.05);
+@navbar-link-disabled-color: #E5E5E5;
+@navbar-link-disabled-bg: transparent;
+@navbar-brand-color: @darkbg-text;
+@navbar-toggle-border-color: @darkbg-text;
+@navbar-toggle-hover-bg: transparent;
+@navbar-toggle-icon-bar-bg: @darkbg-text;
+@navbar-border: @darkbg-text;
+
+@alert-success: @success;
+@alert-info: @info;
+@alert-warning: @warning;
+@alert-danger: @danger;
+
+@progress-success: @success;
+@progress-info: @info;
+@progress-warning: @warning;
+@progress-danger: @danger;
+
+// Card
+@card-body-text: @lightbg-text;
+@card-body-background: #fff;
+@card-image-headline: #fff;
+
+@text-disabled: #a8a8a8;
+@background-disabled: #eaeaea;
+
+
+.btn {
+    position: relative;
+    padding: 8px 30px;
+    border: 0;
+    margin: 10px 1px;
+    cursor: pointer;
+    border-radius: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: @darkbg-text;
+
+    &:hover:not(.btn-link):not(.btn-flat) {
+        .shadow-z-2-hover();
+    }
+    &:active:not(.btn-link):not(.btn-flat) {
+        .shadow-z-3();
+    }
+    transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none !important;
+
+    .variations(~":not(.btn-link):not(.btn-flat)", background-color, @btn-default);
+
+    .variations(~".btn-flat:not(.btn-link)", color, @lightbg-text);
+
+    &.btn-flat {
+        background: none;
+        box-shadow: none;
+        font-weight: 500;
+        &:disabled {
+            color: @text-disabled !important;
+        }
+    }
+
+    &.btn-raised {
+        .btn-shadow();
+    }
+
+    &.btn-fab {
+        margin: 0;
+        padding: 15px;
+        font-size: 26px;
+        width: 56px;
+        height: 56px;
+        &, &:hover {
+            .shadow-z-1();
+            .variations(~"", background-color, transparent);
+        }
+        &, .ripple-wrapper {
+            border-radius: 100%;
+        }
+        &.btn-fab-mini {
+            width: 40px;
+            height: 40px;
+            padding: 13px;
+            font-size: 15px;
+        }
+        i {
+            position: relative;
+            top: -5px;
+        }
+    }
+}
+
+// This is needed to style buttons which has not a variation suffix (they must be stiled as btn-default)
+.btn-link, .btn:not([class^="btn btn-"]), .btn-default {
+    color: @lightbg-text;
+    &:hover {
+        color: @lightbg-text;
+    }
+}
+.btn:not([class^="btn btn-"]), .btn-default, .btn-flat:not(.btn-link) {
+    &:hover, &.active {
+        background-color: rgba(255,255,255,0.5);
+    }
+}
+.open > .dropdown-toggle.btn {
+    .variations(~"", background-color, @btn-default);
+}
+.btn-group .btn+.btn, .btn-group .btn+.btn-group, .btn-group .btn-group+.btn, .btn-group .btn-group+.btn-group {
+  margin-left: 0;
+}
+.btn-group, .btn-group-vertical {
+    position: relative;
+    border-radius: 2px;
+    margin: 10px 1px;
+
+    .btn-shadow();
+    &.open .dropdown-toggle {
+        box-shadow: none;
+    }
+    &.btn-group-raised {
+        .btn-shadow();
+    }
+    .btn, .btn:active, .btn-group {
+        box-shadow: none !important;
+        margin: 0;
+    }
+}
+.btn-group-flat {
+    box-shadow: none !important;
+}
+
+.btn-shadow() {
+    .shadow-z-2();
+    transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    &:active:not(.btn-link) {
+        .shadow-z-3();
+    }
+}

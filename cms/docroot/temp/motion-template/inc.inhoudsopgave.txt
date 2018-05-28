@@ -1,0 +1,10 @@
+									<ul class="scrollmenu" id="scrollmenu">
+										<li><a href="#lente">Lente</a></li>
+										<li><a href="#zomer">Zomer</a></li>
+										<li><a href="">Herfst</a></li>
+										<li><a href="">Winter</a></li>
+										<li><a href="">Kiekeboe!</a></li>
+										<li><a href="">Dit ben ik!</a></li>
+										<li><a href="">Jarig!</a></li>
+										<li><a href="">Sint & Kerst</a></li>
+									</ul>

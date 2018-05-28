@@ -1,0 +1,135 @@
+body.cmsinmotion{
+	font-family: 'roboto';
+	-webkit-font-smoothing: antialiased;
+	font-size: 14px;
+}
+
+.cmsinmotion{
+
+	a {
+		text-decoration:none; 
+		font-weight:400;
+		-webkit-transition: all .3s ease;
+		transition: all .3s ease;
+	}
+	a:hover {
+		text-decoration:none; 
+		color: @font-color-hover;
+		cursor: pointer;
+	}
+
+
+	p, li{
+		font-weight:300;
+		line-height:24px;
+		color: @font-color;
+	}
+
+
+
+	h1{
+		color: @font-color;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 64px;
+		margin: 0;
+		padding: 0;
+	}
+
+	a {
+		color: #4B4541;
+		text-decoration: none;
+	}
+
+	a:hover, a:focus{
+		color: #000;
+		text-decoration: none;
+	}
+	a:focus{
+		outline: none;
+	}
+
+	dt{
+	font-weight: 400;
+	}
+
+	.modal-header .close {
+		float: right;
+		font-size: 40px;
+		font-weight: 300;
+		line-height: 1;
+		color: #fff;
+		text-shadow:none;
+		opacity: 1; 
+		margin-top: -4px;
+	}
+
+	.animate,
+	.nav>li,
+	.nav>li>a{
+		-webkit-backface-visibility: hidden;
+		-webkit-font-smoothing: antialiased;
+		-webkit-transition: all 0.2s;
+		-moz-transition: all 0.2s;
+		transition: all 0.2s;
+	}
+
+	
+	.section-content{
+		margin-top: 50px;
+	}
+
+	.editor .section-content{
+		margin-top: 50px;
+	}
+
+
+	/*GENERAL STYLES*/
+
+	/*MODAL*/
+	.modal-header 
+	{
+		background-color: @blue-500;
+		padding: 36px;
+		border-bottom: 1px solid #E5E5E5;
+
+			h4.modal-title
+			{
+			color: #fff;
+			font-size: 24px;
+			font-weight: 300;
+			}
+	}
+	.modal-sidebar{
+		padding-right: 0; padding-left: 0;
+	}
+	.modal-main{
+		border-left:1px solid #e1e1e1;
+		}
+		
+	.modal-footer {   border-top: 0px; }
+
+	.select-style {
+	    border: 1px solid #ccc;
+	    width: 120px;
+	    border-radius: 3px;
+	    overflow: hidden;
+	    background: #fafafa url("img/icon-select.png") no-repeat 90% 50%;
+	}
+
+	.select-style select {
+	    padding: 5px 8px;
+	    width: 130%;
+	    border: none;
+	    box-shadow: none;
+	    background: transparent;
+	    background-image: none;
+	    -webkit-appearance: none;
+	}
+
+	.select-style select:focus {
+	    outline: none;
+	}
+	
+}
+

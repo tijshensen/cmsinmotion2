@@ -1,0 +1,310 @@
+/*---------EDITOR-------*/
+
+
+.editor{
+
+	background-color: #f3f3f3;
+	background-image: -moz-linear-gradient(#f9f9f9, #f3f3f3);
+	background-image: -webkit-linear-gradient(#f9f9f9, #f3f3f3);
+	background-image: linear-gradient(#f9f9f9, #f3f3f3);
+	background-repeat: repeat-x;
+
+	.wrapper-dropdown-1
+	{
+		background-color: @header-pages;
+		
+		ul{
+			box-shadow:	@shadow-z1;
+		}
+	}
+	.wrapper-dropdown-1:hover
+	{
+		background-color: @blue-600;
+	}
+	
+	.sidebar
+	{
+		padding-left: 0;
+	
+		.sidebar-inner
+		{
+			box-shadow:	@shadow-z1;
+			background-color: #fff;  
+		}
+		
+		.nav-tabs{
+			background: @grey-50;
+			padding-top: 10px;
+		}
+	
+		.nav>li>a
+		{
+			padding: 10px 26px;
+			color:#262626;
+			margin: 0;
+		}
+		
+		.nav>li.fullsize{
+			float: right;
+			border: 1px solid @grey-300;
+			margin-right: 20px;
+			background: @grey-1000;
+		}
+		.nav>li.fullsize>a{
+			border: none;
+			padding: 8px 12px;
+		}
+		.nav>li.fullsize:hover{
+			background: @background-hover;
+			
+		}
+		
+		.nav>li#savedChanges{
+			float: right;
+			margin-right: 20px;
+			margin-top: 5px;
+			opacity: 0;
+		}
+		
+		.nav>li>i{
+			color: @light-green-600;
+
+		}
+		.nav>li>a.saved:hover{
+			padding: 0;
+			border: none;
+		}
+	.tab-pane
+	
+		{
+		padding: 10px;
+	
+		}	
+		
+		//FORM FIELDS
+		label{
+			font-weight: 300;
+			margin-bottom: 0;
+			margin-top: 16px;
+		}	
+		.form-control{
+			box-shadow: none;
+		}
+			
+	
+		.input-group{
+			
+			.input-group-btn{
+				.btn{
+					margin: 0;
+				}
+			}
+		}
+		
+		.cke_chrome{
+			border: none;
+			border-radius: 0;
+			padding: 0;
+			.cke_contents{
+				border-radius: 0;
+				border-left: 1px solid #DDD;
+				border-right: 1px solid #DDD;
+			}
+			.cke_bottom, .cke_top{
+				background: #fff;
+			}
+			.cke_toolgroup{
+				border-radius: 0;
+			}
+		}
+		
+	}
+	
+	.main{
+
+		
+		.main-viewport{
+			text-align: center;
+			margin-top: 10px;
+		}
+		
+		.viewport{
+		box-shadow:	@shadow-z1;
+		}
+		
+		menu{
+			float: right;
+		}
+	}
+	
+
+	
+	
+	
+	
+	/*---------PAGE/SEO PANEL-------*/
+	
+	.pagesettings
+	{
+
+	
+		.nav-tabs{
+			border: 0;
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
+	
+		.nav-tabs>li>a {
+			margin-right: 0;
+			line-height: 1.42857143;
+			border: none;
+			border-radius:0;
+		}
+		
+		.nav-tabs>li.active>a, 
+		.nav-tabs>li.active>a:hover, 
+		.nav-tabs>li.active>a:focus 
+		{
+			color: #555;
+			cursor: default;
+			background-color: #eeeeee;
+			border: none !important;
+		}
+		
+		form{
+			margin: 50px 20px;
+		}
+		
+		
+		.exceeded{
+		color:#dd2c00;
+		}
+	}
+	
+}
+
+
+
+/*---------EDITOR MENU------*/
+
+
+ul.cms-inmotion-editor{
+	list-style: none;
+	li{
+		float: left;
+		margin-right: 8px;
+		height: 36px;
+		width: 36px;
+		background-color: @blue-500;
+		border-radius: 2px;
+		margin-top: 2px;
+		box-shadow: @shadow-z1;
+		
+		-webkit-backface-visibility: hidden;
+		-webkit-font-smoothing: antialiased;
+		-webkit-transition: all 0.2s;
+		-moz-transition: all 0.2s;
+		transition: all 0.2s;
+
+		span{
+		display: none;
+		}
+		i{
+			color: #fff;
+			padding-top: 8px;
+			padding-left: 9px;
+		}
+		.fa-edit{
+			padding-top: 8px;
+			padding-left: 9px;
+		}
+		.fa-arrows-v{
+			padding-top: 8px;
+			padding-left: 14px;
+		}
+		.fa-eye{
+			padding-top: 8px;
+			padding-left: 9px;
+		}
+		.fa-trash-o{
+			padding-top: 8px;
+			padding-left: 9px;
+		}
+		.fa-plus{
+			padding-top: 8px;
+			padding-left: 9px;
+		}
+		.fa-2x{
+			font-size:1.6em;
+		}
+	}
+	li:hover{
+		background-color:@blue-600;
+		cursor: pointer;
+		box-shadow: none;
+	}
+	li.delete{
+		background-color: @red-400;
+	}
+	li.delete:hover{
+		background-color: @red-600;
+	}
+	li.edit{
+		background-color: @light-green-600;
+	}
+	li.edit:hover{
+		background-color: @light-green-700;
+	}
+	li.add{
+		background-color: @yellow-700;
+	}
+	li.add:hover{
+		background-color: @yellow-800;
+	}
+}
+
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) 
+{
+	ul.cms-inmotion-editor
+	{
+		
+		li{
+			width: 150px;
+			float: none;
+
+		
+			i
+			{
+				display: block;
+				float: left;
+				width: 40px;
+			}
+			.fa-2x{
+				font-size:1.2em;
+				padding-top: 10px;
+			}
+			span
+			{
+				display: block;
+				padding-top: 8px;
+				color: @white;
+				font-weight: 500;
+			}
+		}
+	}	
+}
+
+
+.ui-sortable-helper{
+	background: @grey-200;
+	box-shadow: @shadow-z2;
+}
+
+.CMS_edit_container{
+	background: @grey-100;
+}
+
+
+

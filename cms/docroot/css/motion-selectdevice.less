@@ -1,0 +1,427 @@
+
+/* Default custom select styles */
+.selectdevice{
+	
+	/*----------CUSTOM SELECT-----------*/
+
+	/* GLOBALS */
+
+	*,
+	*:after,
+	*:before {
+	    -webkit-box-sizing: border-box;
+	    -moz-box-sizing: border-box;
+	    box-sizing: border-box;
+	    padding: 0;
+	    margin: 0;
+	}
+
+	::selection {
+	    background: transparent; 
+	}
+
+	::-moz-selection {
+	    background: transparent; 
+	}
+
+	.wrapper-demo {
+	    margin: 60px 0 0 0;
+	    *zoom: 1;
+	    font-weight: 400;
+	}
+
+	.wrapper-demo:after {
+	    clear: both;
+	    content: "";
+	    display: table;
+	}
+
+	/* DEMO 1 */
+
+	.wrapper-dropdown-1 {
+	    /* Size and position */
+	    position: relative; /* Enable absolute positionning for children and pseudo elements */
+	    width: 200px;
+	    padding: 12px;
+	    margin: 0 auto;
+		outline: none;
+	    /* Styles */
+	    background: @grey-1000;
+	    color: @font-color;
+	}
+	.wrapper-dropdown-1:hover{
+		background: @background-hover;
+		cursor: pointer;
+		
+	}
+
+	.wrapper-dropdown-1:after {
+	    content: "";
+	    width: 0;
+	    height: 0;
+	    position: absolute;
+	    right: 16px;
+	    top: 50%;
+	    margin-top: -6px;
+	    border-width: 6px 0 6px 6px;
+	    border-style: solid;
+	    border-color: transparent #fff;    
+	}
+
+	.wrapper-dropdown-1 .dropdown {
+	    /* Size & position */
+	    position: absolute;
+	    top: 100%;
+	    left: 0;
+	    right: 0;
+
+	    /* Styles */
+	    background: #fff;
+	    list-style: none;
+	    font-weight: normal; /* Cancels previous font-weight: bold; */
+
+	    /* Hiding */
+	    opacity: 0;
+	    pointer-events: none;
+	}
+
+	.wrapper-dropdown-1 .dropdown li a {
+	    display: block;
+	    text-decoration: none;
+	    color: #37474f;
+	    padding: 10px 20px;
+	}
+
+	/* Hover state */
+	.wrapper-dropdown-1 .dropdown li:hover a {
+	    background: #f3f8f8;
+	}
+
+	/* Active state */
+	.wrapper-dropdown-1.active .dropdown {
+	    opacity: 1;
+	    pointer-events: auto;
+	}
+
+	.wrapper-dropdown-1.active:after {
+	    border-color: @blue-500 transparent;
+	    border-width: 6px 6px 0 6px ;
+	    margin-top: -3px;
+	}
+
+	.wrapper-dropdown-1.active {
+	  background: @blue-500;
+	  background: -moz-linear-gradient(left,  @blue-500 0%, @blue-500 78%, #ffffff 78%, #ffffff 100%);
+	  background: -webkit-gradient(linear, left top, right top, color-stop(0%,@blue-500), color-stop(78%,@blue-500), color-stop(78%,#ffffff), color-stop(100%,#ffffff));
+	  background: -webkit-linear-gradient(left,  @blue-500 0%,@blue-500 78%,#ffffff 78%,#ffffff 100%);
+	  background: -o-linear-gradient(left,  @blue-500 0%,@blue-500 78%,#ffffff 78%,#ffffff 100%);
+	  background: -ms-linear-gradient(left,  @blue-500 0%,@blue-500 78%,#ffffff 78%,#ffffff 100%);
+	  background: linear-gradient(to right,  @blue-500 0%,@blue-500 78%,#ffffff 78%,#ffffff 100%);
+	  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@blue-500', endColorstr='#ffffff',GradientType=1 );
+	}
+
+	/* No CSS3 support */
+
+	.no-opacity       .wrapper-dropdown-1 .dropdown,
+	.no-pointerevents .wrapper-dropdown-1 .dropdown {
+	    display: none;
+	    opacity: 1; /* If opacity support but no pointer-events support */
+	    pointer-events: auto; /* If pointer-events support but no pointer-events support */
+	}
+
+	.no-opacity       .wrapper-dropdown-1.active .dropdown,
+	.no-pointerevents .wrapper-dropdown-1.active .dropdown {
+	    display: block;
+	}
+	
+	
+	div.cs-select {
+	
+		display: inline-block;
+		vertical-align: middle;
+		position: relative;
+		text-align: left;
+		z-index: 100;
+		width: 100%;
+		max-width: 500px;
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+
+	div.cs-select:focus {
+		outline: none; /* For better accessibility add a style for this in your skin */
+	}
+
+	.cs-select select {
+		display: none;
+	}
+
+
+
+	.cs-select span {
+		display: block;
+		position: relative;
+		cursor: pointer;
+		background-color: #fff;
+		color: #424242;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	/* Placeholder and selected option */
+	.cs-select > span {
+		padding-right: 3em;
+	}
+
+	.cs-select > span::after,
+	.cs-select .cs-selected span::after {
+		speak: none;
+		position: absolute;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		transform: translateY(-50%);
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	.cs-select > span::after {
+		content: '\25BE';
+		right: 1em;
+	}
+
+	.cs-skin-elastic > span.cs-placeholder{
+		color: #fff;
+	}
+	.cs-select .cs-selected span::after {
+		font-family: 'FontAwesome';
+		content: '&#xf078;';
+		margin-left: 1em;
+	}
+
+	.cs-select.cs-active > span::after {
+		-webkit-transform: translateY(-50%) rotate(180deg);
+		transform: translateY(-50%) rotate(180deg);
+	}
+
+
+
+	/* Options */
+	.cs-select .cs-options {
+		position: absolute;
+		overflow: hidden;
+		width: 100%;
+		background: #1976d2;
+		visibility: hidden;
+	}
+
+	.cs-select.cs-active .cs-options {
+		visibility: visible;
+	}
+
+	.cs-select ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+	}
+
+	.cs-select ul span {
+		padding: 1em;
+	}
+
+	.cs-select ul li.cs-focus span {
+		background-color: #ddd;
+	}
+
+	/* Optgroup and optgroup label */
+	.cs-select li.cs-optgroup ul {
+		padding-left: 1em;
+
+	}
+
+	.cs-select li.cs-optgroup > span {
+		cursor: default;
+	}
+
+
+	div.cs-skin-elastic {
+		background: transparent;
+		font-size: normal;
+		
+		color: #fff;
+		margin-right: 50px;
+
+	}
+
+	@media screen and (max-width: 30em) {
+		div.cs-skin-elastic { font-size: 1em; }
+	}
+
+	.cs-skin-elastic > span {
+		background-color:#1976d2;
+		z-index: 100;
+			padding: 8px 28px 6px 20px;
+			margin-top: 8px;
+		
+		
+	}
+
+	.cs-skin-elastic > span::after {
+		font-family: 'FontAwesome';
+		/*content: '&#xf078;';*/
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+	}
+
+	.cs-skin-elastic .cs-options {
+		overflow: visible;
+		background: transparent;
+		opacity: 1;
+		visibility: visible;
+		/*padding-bottom: 1.25em;*/
+		pointer-events: none;
+	}
+
+	.cs-skin-elastic.cs-active .cs-options {
+		pointer-events: auto;
+	}
+
+	.cs-skin-elastic .cs-options > ul::before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		-webkit-transform: scale3d(1,0,1);
+		transform: scale3d(1,0,1);
+		background: #fff;
+		-webkit-transform-origin: 50% 0%;
+		transform-origin: 50% 0%;
+		-webkit-transition: -webkit-transform 0.3s;
+		transition: transform 0.3s;
+	}
+
+	.cs-skin-elastic.cs-active .cs-options > ul::before {
+		-webkit-transform: scale3d(1,1,1);
+		transform: scale3d(1,1,1);
+		-webkit-transition: none;
+		transition: none;
+		-webkit-animation: expand 0.6s ease-out;
+	  	animation: expand 0.6s ease-out;
+	}
+
+	.cs-skin-elastic .cs-options ul li {
+		opacity: 0;
+		-webkit-transform: translate3d(0,-25px,0);
+		transform: translate3d(0,-25px,0);
+		-webkit-transition: opacity 0.15s, -webkit-transform 0.15s;
+		transition: opacity 0.15s, transform 0.15s;
+	}
+
+	.cs-skin-elastic.cs-active .cs-options ul li {
+		-webkit-transform: translate3d(0,0,0);
+		transform: translate3d(0,0,0);
+		opacity: 1;
+		-webkit-transition: none;
+		transition: none;
+		-webkit-animation: bounce 0.6s ease-out;
+	  	animation: bounce 0.6s ease-out;
+	}
+
+	/* Optional delays (problematic in IE 11/Win) */
+	/*
+	.cs-skin-elastic.cs-active .cs-options ul li:first-child {
+		-webkit-animation-delay: 0.1s;
+		animation-delay: 0.1s;
+	}
+
+	.cs-skin-elastic.cs-active .cs-options ul li:nth-child(2) {
+		-webkit-animation-delay: 0.15s;
+		animation-delay: 0.15s;
+	}
+
+	.cs-skin-elastic.cs-active .cs-options ul li:nth-child(3) {
+		-webkit-animation-delay: 0.2s;
+		animation-delay: 0.2s;
+	}
+
+	.cs-skin-elastic.cs-active .cs-options ul li:nth-child(4) {
+		-webkit-animation-delay: 0.25s;
+		animation-delay: 0.25s;
+	} 
+
+	/* with more items, more delays declarations are needed */
+
+
+	.cs-skin-elastic .cs-options span {
+		background-repeat: no-repeat;
+		background-position: 1.5em 50%;
+		background-size: 2em auto;
+		/*padding: 0.8em 1em 0.8em 4em;*/
+	}
+
+	.cs-skin-elastic .cs-options span:hover,
+	.cs-skin-elastic .cs-options li.cs-focus span,
+	.cs-skin-elastic .cs-options .cs-selected span {
+		color: #1e4c4a;
+	}
+
+	.cs-skin-elastic .cs-options .cs-selected span::after {
+		content: '';
+	}
+
+	.cs-skin-elastic .cs-options li.flag-france span {
+		background-image: url(../img/france.svg);
+	}
+
+	.cs-skin-elastic .cs-options li.flag-brazil span {
+		background-image: url(../img/brazil.svg);
+	}
+
+	.cs-skin-elastic .cs-options li.flag-safrica span {
+		background-image: url(../img/south-africa.svg);
+	}
+
+	.cs-skin-elastic .cs-options li.flag-argentina span {
+		background-image: url(../img/argentina.svg);
+	}
+
+	@-webkit-keyframes expand { 
+		0% { -webkit-transform: scale3d(1,0,1); }
+		25% { -webkit-transform: scale3d(1,1.2,1); }
+		50% { -webkit-transform: scale3d(1,0.85,1); }
+		75% { -webkit-transform: scale3d(1,1.05,1) }
+		100% { -webkit-transform: scale3d(1,1,1); }
+	}
+
+	@keyframes expand { 
+		0% { -webkit-transform: scale3d(1,0,1); transform: scale3d(1,0,1); }
+		25% { -webkit-transform: scale3d(1,1.2,1); transform: scale3d(1,1.2,1); }
+		50% { -webkit-transform: scale3d(1,0.85,1); transform: scale3d(1,0.85,1); }
+		75% { -webkit-transform: scale3d(1,1.05,1); transform: scale3d(1,1.05,1); }
+		100% { -webkit-transform: scale3d(1,1,1); transform: scale3d(1,1,1); }
+	}
+
+
+	@-webkit-keyframes bounce { 
+		0% { -webkit-transform: translate3d(0,-25px,0); opacity:0; }
+		25% { -webkit-transform: translate3d(0,10px,0); }
+		50% { -webkit-transform: translate3d(0,-6px,0); }
+		75% { -webkit-transform: translate3d(0,2px,0); }
+		100% { -webkit-transform: translate3d(0,0,0); opacity: 1; }
+	}
+
+	@keyframes bounce { 
+		0% { -webkit-transform: translate3d(0,-25px,0); transform: translate3d(0,-25px,0); opacity:0; }
+		25% { -webkit-transform: translate3d(0,10px,0); transform: translate3d(0,10px,0); }
+		50% { -webkit-transform: translate3d(0,-6px,0); transform: translate3d(0,-6px,0); }
+		75% { -webkit-transform: translate3d(0,2px,0); transform: translate3d(0,2px,0); }
+		100% { -webkit-transform: translate3d(0,0,0); transform: translate3d(0,0,0); opacity: 1; }
+	}
+}

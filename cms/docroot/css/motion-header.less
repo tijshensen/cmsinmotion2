@@ -1,0 +1,126 @@
+	
+.cmsinmotion{
+	.header{
+		min-height: 50px;
+		z-index: 1;
+		
+	}
+
+	.header-pages{
+		background-color: @header-pages;
+		border-bottom: @border-line;
+		border-radius: 0;
+		margin-bottom: 0;
+	}
+	.navbar{
+		margin-bottom: 0;
+	}
+
+	.navbar-header{
+		a, i, span
+		{
+			color: @font-color;
+			font-size: 18px;
+			font-weight: 400;
+			margin-top: 16px;
+			text-decoration: none;
+		}
+		i
+		{
+			padding-left: 10px;
+			margin-right: 20px;
+		}
+		i:hover{
+			background-color: @background-hover;
+		}
+		
+		span{
+			padding-left: 18px;
+		}
+	
+		.navbar-title{
+			margin-left: 0px;
+		
+			a{
+				padding: 0; 
+				margin-top: 7px; 
+				border-radius: 4px;
+			
+					i{
+						padding: 10px 12px; 
+						margin: 0; 
+					}
+				}
+		}
+		.navbar-devices{
+			display: inline-block; 
+			margin-left: 0;
+		}
+	
+
+	}
+
+	.navbar-fixed-top {
+		top: 0;
+	
+	}
+
+
+
+	.navbar-nav>li{
+		margin-left: 30px;
+	}
+
+	.navbar-nav>li>a{
+		display: inline-block;
+		border-radius: 0;
+	}
+
+
+	.navbar-nav>li>a {
+		color: @white;
+		padding: 15px 22px;
+	}
+
+	.pages .navbar-nav>li>a:hover, 
+	.pages .nav>li>a:focus, 
+	.editor .navbar-nav>li>a:hover, 
+	.editor .nav>li>a:focus
+	{
+	 	background-color:@blue-600;
+	}
+
+	.inserts .navbar-nav>li>a:hover, 
+	.inserts .nav>li>a:focus
+	{
+	 	background-color:@green-600;
+	}
+	.controlpanel .navbar-nav>li>a:hover, 
+	.controlpanel .nav>li>a:focus
+	{
+	 	background-color:@purple-600;
+	}
+
+	.navbar-nav>li>a.btn-publish {
+	 	background-color: @btn-publish;
+		color: #fff;
+		i{
+			margin-right: 12px;
+		}
+	}
+
+	.navbar-nav>li>a.btn-publish:hover, 
+	.navbar-nav>li>a.btn-publish:focus {
+	 	background-color: @btn-publish-hover;
+	}
+
+	.navbar-nav>li>a.btn-publish:hover, 
+	.navbar-nav>li>a.btn-publish:focus {
+	 	background-color: @btn-publish-hover;
+	}
+
+	.navbar-nav>li>a i.fa-desktop{
+		padding-top: 4px;
+
+	}
+}
