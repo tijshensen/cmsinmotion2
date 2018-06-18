@@ -12,7 +12,7 @@ Go to CMS/settings.inc.php to change the base dir and Database connection
 Login Backend:
 http://localhost:8888/cmsinmotion2/cms/docroot
 
-user: admin
+user: admin@cmsinmotion.com
 pasword: rQC2YFHR
 
 
