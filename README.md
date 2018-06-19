@@ -12,6 +12,11 @@ Go to CMS/settings.inc.php to change the base dir and Database connection
 Login Backend:
 http://localhost:8888/cmsinmotion2/cms/docroot
 
+Add user
+
+INSERT INTO `users` (`id`, `voornaam`, `achternaam`, `emailadres`, `wachtwoord`, `group_id`, `cookiekey`, `firstuse`) VALUES
+(7, 'admin', 'admin', 'admin@cmsinmotion.com', 'b028737117b44d0ad46ef35626eb15017090e9b3', 3, '', 0);
+
 user: admin@cmsinmotion.com
 pasword: rQC2YFHR
 
@@ -20,3 +25,10 @@ Go to site:
 cmsinmotion2/activesite/
 
 -todo URL redirecting
+
+
+
+
+
+
+
