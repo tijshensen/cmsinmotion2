@@ -69,7 +69,7 @@ var wpNavMenu;
 						var t = $(this);
 						prev = prev || t.menuItemDepth();
 						$(this).removeClass('menu-item-depth-'+ prev )
-							.addClass('menu-item-depth-'+ current );
+							.addClass('menu-item-depth-'+ current ).data('depth',current);
 					});
 				},
 				shiftDepthClass : function(change) {
@@ -136,11 +136,29 @@ var wpNavMenu;
 							parentDepth = depth - 1,
 							parent = item.prevAll( '.menu-item-depth-' + parentDepth ).first();
 
-						if ( 0 === depth ) { // Item is on the top level, has no parent
+                        if ( 0 === depth ) { // Item is on the top level, has no parent
 							input.val(0);
 						} else { // Find the parent item, and retrieve its object id.
-							input.val( parent.find( '.menu-item-data-db-id' ).val() );
+                            input.val( parent.find( '.menu-item-data-db-id' ).val() );
 						}
+                        // item.nextUntil('.menu-item-depth-'+depth).css('color','red');
+
+						item.nextAll().each(function () {
+
+						    if ($(this).data('depth') === depth + 1){
+                                $(this).css('color','green').updateParentMenuItemDBId();
+                            }
+						    if ($(this).data('depth') <= depth){
+                                return false;
+                            }
+
+
+                            /*if ($(this).hasClass('.menu-item-depth-'+depth) === false){
+								return false;
+							}
+							*/
+                        });
+
 					});
 				},
 				hideAdvancedMenuItemFields : function() {
@@ -652,7 +670,7 @@ var wpNavMenu;
 
 				prevBottom = (prev.length) ? prev.offset().top + prev.height() : 0;
 				nextThreshold = (next.length) ? next.offset().top + next.height() / 3 : 0;
-				minDepth = (next.length) ? next.menuItemDepth() : 0;
+				minDepth = (next.length) ? next.menuItemDepth() - 1 : 0;
 
 				if( prev.length )
 					maxDepth = ( (depth = prev.menuItemDepth() + 1) > api.options.globalMaxDepth ) ? api.options.globalMaxDepth : depth;

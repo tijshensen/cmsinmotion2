@@ -269,10 +269,10 @@
            ?>
           
           
-          	<li id="menu-item-<?=$page['id'];?>" class="menu-item menu-item-category menu-item-depth-<?=$page['depth'];?> menu-item-edit-inactive">
+          	<li id="menu-item-<?=$page['id'];?>" class="menu-item menu-item-category menu-item-depth-<?=$page['depth'];?> menu-item-edit-inactive" data-depth="<?=$page['depth'];?>">
 			<dl class="menu-item-bar">
 				<dt class="menu-item-handle">
-					<span class="item-title"><span id='edit-settings-<?=$page['id'];?>'><?=$page['title'];?></span> <span class="is-submenu" style="<?php if($page['parent_id'] == 0) { ?>display: none;<?php } ?>">sub item</span></span>
+					<span class="item-title"  id='edit-settings-<?=$page['id'];?>'><span><?=$page['title'];?></span> <span class="is-submenu" style="<?php if($page['parent_id'] == 0) { ?>display: none;<?php } ?>">sub item</span></span>
 					<span class="item-controls">
 						<span class="item-type"><?=$pageTypes[$page['template_id']]['name'];?></span>
 					</span>
