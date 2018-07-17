@@ -16,8 +16,8 @@
 	// Directories
 	define("motioncms3_directory_base", "./");
 	define("motioncms3_directory_modules", motioncms3_directory_base."./modules/");
-	define("base_path_rewrite", "http://".$_SERVER['HTTP_HOST']."/cmsinmotion2/cms/docroot");
-	define("base_path_site_url", "http://".str_replace("cms", "www", $_SERVER['HTTP_HOST']));
+	define("base_path_rewrite", "https://".$_SERVER['HTTP_HOST']."/cmsinmotion2/cms/docroot");
+	define("base_path_site_url", "https://".str_replace("cms", "www", $_SERVER['HTTP_HOST']));
 	
 	define("base_path_admin", base_path_rewrite."/beheer/");
 	
