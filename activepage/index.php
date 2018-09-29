@@ -10,7 +10,7 @@
 		$fetch = file_get_contents("../cms/docroot/content/sitemap.xml");
 		
 	} else {
-		
+		$_GET['url'] = rtrim($_GET['url'], '.html');
 		if (file_exists("../cms/renders/infrastructure_old.json")) { 
 			
 			$oldNavigation = json_decode(file_get_contents("../cms/renders/infrastructure_old.json"), true);
