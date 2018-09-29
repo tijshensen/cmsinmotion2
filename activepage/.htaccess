@@ -7,6 +7,11 @@
 	#Redirect a single page
 	#Redirect 301 /cmsinmotion2/search.html https:google.com/search?q=cmsinmotion2
     #Redirect 301 /klachtenprocedure http://www.newwebsite.com/klachtenprocedure.html/
+    
+    Redirect 301 /locaties-kwaliteit/erkend-kinderdagverblijf https://www.kinderdagverblijfkiekeboe.nl/kwaliteit/erkend-kinderdagverblijf/
+
+    
+    
 
     #Redirect entire site
     #Redirect 301 / http://new-website.com
