@@ -271,8 +271,9 @@
 	}
 	
 	$fetchTemplate->core = str_replace('<meta name="description" content="" />', '<meta name="description" content="'.$page->meta_description.'" />', $fetchTemplate->core);
-	
-	$fetchTemplate->core = preg_replace("/<title>.*?<\/title>/ims", "<title>".$page->title."</title>", $fetchTemplate->core);
+    $fetchTemplate->core = str_replace('<meta name="description" content="">', '<meta name="description" content="'.$page->meta_description.'" />', $fetchTemplate->core);
+
+    $fetchTemplate->core = preg_replace("/<title>.*?<\/title>/ims", "<title>".$page->title."</title>", $fetchTemplate->core);
 	
 	$fetchTemplate->core = str_replace("<multiline>", "", $fetchTemplate->core);
 	$fetchTemplate->core = str_replace("</multiline>", "", $fetchTemplate->core);	

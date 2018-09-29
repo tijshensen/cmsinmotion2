@@ -1,4 +1,25 @@
 	Options +FollowSymlinks
 	RewriteEngine On
 	RewriteCond %{REQUEST_FILENAME} !-f
+
+    #---------- 301 redirect -------------#
+
+	#Redirect a single page
+	#Redirect 301 /cmsinmotion2/search.html https:google.com/search?q=cmsinmotion2
+    #Redirect 301 /klachtenprocedure http://www.newwebsite.com/klachtenprocedure.html/
+
+    #Redirect entire site
+    #Redirect 301 / http://new-website.com
+
+
+	#redirect all requests to https.
+	#http://cmsinmotion2.com/cms/docroot/pages
+	#to
+	#https://cmsinmotion2.com/cms/docroot/pages
+
+	#RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    #---------- End 301 redirect -------------#
+
 	RewriteRule ^(.*)$ index.php?url=$1 [QSA] [L]
+
